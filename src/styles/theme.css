@@ -1,0 +1,169 @@
+/* Light Theme */
+body {
+  background-color: #ffffff;
+  color: #212529;
+  transition: all 0.3s ease;
+}
+
+/* Light mode text colors */
+.text-muted {
+  color: #26282b !important;
+}
+
+/* Dark Theme */
+[data-theme="dark"] body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .text-muted {
+  color: #b3b3b3 !important;
+}
+[data-theme="dark"] .text-secondary {
+  color: #e0e0e0 !important;
+}
+[data-theme="dark"] .text-primary {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .bg-light {
+  background-color: #2d2d2d !important;
+}
+[data-theme="dark"] .bg-white {
+  background-color: #1a1a1a !important;
+}
+[data-theme="dark"] .card {
+  background-color: #2d2d2d !important;
+  border-color: #404040 !important;
+  color: #000000 !important;
+}
+[data-theme="dark"] .card-body,
+[data-theme="dark"] .card-title {
+  color: #000000 !important;
+}
+[data-theme="dark"] .card-text {
+  color: #000000 !important;
+}
+[data-theme="dark"] .card h5,
+[data-theme="dark"] .card .h5,
+[data-theme="dark"] .card .fw-bold,
+[data-theme="dark"] .card strong {
+  color: #000000 !important;
+}
+[data-theme="dark"] .lead {
+  color: #e0e0e0 !important;
+}
+[data-theme="dark"] .small {
+  color: #b3b3b3 !important;
+}
+[data-theme="dark"] .form-control {
+  background-color: #2d2d2d !important;
+  border-color: #404040 !important;
+  color: #ffffff !important;
+}
+[data-theme="dark"] .form-control::placeholder {
+  color: #b3b3b3 !important;
+}
+
+/* 🎨 Simple Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Hover Effects */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar hover effects */
+.nav-link-custom {
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-link-custom:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: white;
+}
+
+/* 📱 Mobile Responsive Design */
+@media (max-width: 768px) {
+  /* Mobile için kart düzenlemeleri */
+  .user-card {
+    margin-bottom: 1rem;
+  }
+
+  /* Arama kutusu mobilde tam genişlik */
+  .search-box {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+
+  /* Sıralama dropdown mobilde tam genişlik */
+  .sort-dropdown {
+    width: 100% !important;
+  }
+
+  /* Mobilde padding azalt */
+  .container-mobile {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Mobilde font boyutları */
+  .display-4 {
+    font-size: 2rem !important;
+  }
+
+  .lead {
+    font-size: 1rem !important;
+  }
+
+  /* Mobilde buton boyutları */
+  .btn-mobile {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* 🖥️ Desktop Responsive Design */
+@media (min-width: 1200px) {
+  /* Desktop için daha büyük kartlar */
+  .user-card-desktop {
+    min-height: 300px !important;
+  }
+}
